@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+
+    #Options +FollowSymLinks
+    #activar motor de reescritura
+    RewriteEngine On  
+
+    #no sobreescribir directorios o ficheros si existen
+    #importante para css, js, imágenes, ...
+    RewriteCond %{SCRIPT_FILENAME} !-d 
+    RewriteCond %{SCRIPT_FILENAME} !-f
+
+    # analizar los request filename
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteCond %{REQUEST_FILENAME} !-l
+
+    #regla de reescritura de la url
+    #RewriteRule ^(.+)*$ index.php?url=$1 [QSA,L]
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+</IfModule>

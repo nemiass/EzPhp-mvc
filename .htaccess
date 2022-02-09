@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+
+    # Este .htacces redigire al public
+    RewriteEngine On
+    #RewriteBase / -> para produccion, investigar
+    RewriteRule ^([a-zA-A0-9\-\_\/]*)$ public/$1
+
+</IfModule>

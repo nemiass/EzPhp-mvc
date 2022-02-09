@@ -12,10 +12,6 @@ abstract class Model
 
     protected static function connect()
     {
-        // TODO: Error extends model, cofig to future
-        // self::$database = new Database;
-        // self::$db = self::$database->getConnection();
-        $database = new Database;
-        return $database->getConnection();
+        // TODO:
     }
 }

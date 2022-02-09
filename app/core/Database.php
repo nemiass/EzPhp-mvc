@@ -8,7 +8,7 @@ use const config\USER;
 
 class Database
 {
-    public \PDO|null $db;
+    private \PDO|null $db;
 
     public function __construct()
     {
